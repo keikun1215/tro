@@ -65,6 +65,7 @@
     }
     // 発言
     function say(){
+        for(let i; i<prompt("enterNum"); i++){
         splitLine(input_url.val()).map(function(str,o,a){
             var m = str.match(/([0-9]+)\/([0-9]+)/);
             if(!m) return;
@@ -85,6 +86,7 @@
                 },makeTime(o,i,a.length));
             });
         });
+            }
     }
     // DM
     function startDM(){
